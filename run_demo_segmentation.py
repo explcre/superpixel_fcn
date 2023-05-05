@@ -189,7 +189,8 @@ def test(args, model, img_paths, save_path, idx):
         print("processing %d"%idx)
     ###########added##########################
     # Load the mask image
-    mask_image_path = generate_segmentation_path(img_paths)#'path/to/mask/image'
+    output_dir = "/scratch/bbsb/xu10/superpixel_fcn/demo"
+    mask_image_path = generate_segmentation_path(img_paths,output_dir)#'path/to/mask/image'
     mask_image = cv2.imread(mask_image_path)
 
     # Calculate the final set of superpixels
